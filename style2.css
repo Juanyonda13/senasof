@@ -1,0 +1,431 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body
+{
+    font-family: Verdana;
+}
+
+.menu
+{
+  align-items:baseline;
+  justify-content:center;
+  padding: 10px 0 0;
+  background-color: rgb(255, 252, 252);
+  flex-wrap: nowrap;
+  display: flex;
+  align-items:center;
+  height: 100px;
+}
+
+.box{
+    display: flex;
+    align-items:center;
+    height: 40px;
+    width: 40%;
+}
+.desplegable
+{
+  float:left;
+  position:relative;
+  height:40px;
+  width: 130px;
+}
+input
+{
+ position:absolute;
+ display:inline-block;
+ font-size: 15px;
+ box-sizing: border-box;
+ transition: .5s;
+}
+.boton
+{
+  position:relative;
+  display:inline-block;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: .5s;
+
+}
+.boton
+{
+  position:relative;
+  left:4px;
+  border-radius:10px 0 0 10px;
+  height:57px;
+  width: 130px;
+  border:solid;
+  border-width: 1px;
+  border-right:0;
+  cursor:pointer;
+  background: #fff;
+}
+
+.desplegable button:hover
+{
+  border-radius:10px 0 0 0px;
+}
+.links
+a{
+  text-decoration: none;
+  color:black;
+  display:block;
+  padding:13px;
+  
+  
+}
+.links
+{
+  position:relative;
+  left:4px;
+  background-color:#f9f9f9f9;
+  width: 120px;
+  display:none;
+}
+.links a:hover
+{
+background-color: hsl(331, 76%, 64%);
+}
+.desplegable:hover .links
+{
+  display: block;
+  position:absolute;
+}
+
+
+input[type="text"]
+{
+  background:#fff;
+  width: 450px;
+  height:57px;
+  border:solid;
+  border-width: 1px;
+  border-left:0;
+  outline:none;
+  padding:0 25px;
+  border-radius:0 10px  10px 0;
+}
+.links 
+{
+    position:relative;
+    display: none;
+    padding:12px;
+}
+.links> a
+{
+  text-decoration: none;
+  color:black;
+  display:block;
+  padding:3px;
+}
+.desplegable:hover .links
+{
+    display:block;
+}
+.buscador
+{
+
+  background:#fff;
+  border:solid;
+  border-width: 1px;
+  border-left:0;
+  outline:none;
+  padding:0 25px;
+  border-radius:0 10px  10px 0;
+  height: 48px;
+  width: 500px;
+}
+
+.iconos 
+{
+    
+    
+    height: 40px;
+    width: 50%;
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content:space-around;
+    align-items:center;
+}
+.iconos a
+{
+    text-decoration: none;
+    color: rgb(13, 13, 13);
+    
+}
+.icono .icono1
+{
+    display: flex;
+    justify-content:space-around;
+    align-items:center;
+}
+nav {
+    background-color: #333;
+    border: none;
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+    color: #888;
+    display: block;
+    flex-wrap: nowrap;
+    justify-content:center;
+    
+   
+   }
+   nav ul {
+    margin: 0;
+    padding: 0;
+   }
+    nav ul li {
+        justify-content:center;
+    display: inline-block;
+    list-style-type: none;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    }
+    nav > ul > li > a {
+        
+    color: #aaa;
+    display: block;
+    line-height: 56px;
+    padding: 0 24px;
+    text-decoration: none;
+    }
+    nav > ul > li > a > .caret {
+        
+        border-top: 4px solid hsl(331, 76%, 64%);
+         border-right: 4px solid transparent;
+         border-left: 4px solid transparent;
+         content: "";
+         display: inline-block;
+         height: 0;
+         width: 0;
+         vertical-align: middle;
+         -webkit-transition: color 0.1s linear;
+         -moz-transition: color 0.1s linear;
+         -o-transition: color 0.1s linear;
+         transition: color 0.1s linear;
+        }
+        nav > ul > li:hover {
+            background-color: rgb( 40, 44, 47 );
+           }
+           nav > ul > li:hover > a {
+            color: rgb( 255, 255, 255 );
+           }
+           nav > ul > li:hover > a > .caret {
+            border-top-color: rgb( 255, 255, 255 );
+           }
+           nav > ul > li > div {
+            background-color: hsl(331, 76%, 64%);
+            border-top: 0;
+            border-radius: 0 0 4px 4px;
+            box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+            display: none;
+            margin: 0;
+            opacity: 0;
+            position: absolute;
+            width: 165px;
+            visibility: hidden;
+            z-index: 100;
+            -webkit-transiton: opacity 0.2s;
+            -moz-transition: opacity 0.2s;
+            -ms-transition: opacity 0.2s;
+            -o-transition: opacity 0.2s;
+            -transition: opacity 0.2s;
+           } 
+           nav > ul > li > div ul > li {
+            display: block;
+            }
+            nav > ul > li > div ul > li > a {
+            color: #fff;
+            display: block;
+            padding: 12px 24px;
+            text-decoration: none;
+            }
+            nav > ul > li > div ul > li:hover > a {
+            background-color: rgba( 255, 255, 255, 0.1);
+            }       
+ nav > ul > li:hover > div {
+ display: block;
+ opacity: 1;
+ visibility: visible;
+}
+           
+  /*///////////////////////////////////////////////////////////////////////////////////////////////////// */
+  
+  .carrusel 
+  {
+    background: #37c3f5ec;
+    background: linear-gradient(
+      67deg,
+      hsl(38, 26%, 92%) 3%,
+      #a7d4f1 52%,
+      rgb(58, 169, 210) 100%
+    );
+  }
+  .section-row 
+  {
+    display: flex;
+    height: 500px;
+  }
+  .section-col 
+  {
+    width: 38%;
+    text-align: center;
+    padding-left: 35px;
+  }
+  .section-col h1 
+  {
+    margin-top: 60px;
+    font-size: 90px;
+  }
+  
+  .section-col h2
+  {
+    font-size: 50px;
+  }
+  .section-col p 
+  {
+    font-weight: 300;
+    font-size: 1.2rem;
+  }
+  .btn__section-1 
+  {
+    margin-top: 40px;
+    margin-right: 15px;
+    border: 1px solid hsl(0, 0%, 100%);
+    padding: 1.3em 2.5em;
+    background-color: hsl(331, 76%, 64%);
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .btn__section-1:hover 
+  {
+    background-color: #e3dada;
+  }
+  
+  .btn__section-2 
+  {
+    margin-top: 40px;
+    margin-right: 15px;
+    border: 1px solid black;
+    background-color: rgb(248, 248, 248);
+    padding: 1.3em 2.5em;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .btn__section-2:hover 
+  {
+    background-color: rgb(219, 219, 219);
+  }
+  
+  .img-carrusel 
+  {
+    width: 100%;
+    height: 100%;
+  }
+  .carrusel-btns 
+  {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+  }
+  /*//////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+  
+  .footer 
+  {
+    background-color: rgb(34, 34, 34);
+    padding-top: 30px;
+    padding-bottom: 130px;
+  }
+  
+  .footer-container 
+  {
+    background-color: rgb(34, 34, 34);
+    max-width: 100%;
+    margin: auto;
+  }
+  .row 
+  
+  {
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+  .footer-col 
+  {
+    width: 20%;
+    padding: 0 15px;
+    line-height: 200%;
+    
+  }
+  .footer-col h4 
+  {
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 500;
+    padding-bottom: 20px;
+  }
+  .footer-col li
+  {
+    font-size: 0.9rem;
+    color: rgb(161, 161, 161);
+    font-weight: 300;
+  }
+  .foo-ico {
+    font-size: 24px;
+    margin-right: 20px;
+    color: rgb(238, 238, 238);
+  }
+  
+  .fa-credit-card 
+  {
+    font-size: 20px;
+    margin-right: 8px;
+    color: whitesmoke;
+  }
+  .col-1 ul 
+  {
+    padding-top: 50px;
+  }
+  .brands 
+  {
+    padding-top: 19px;
+  }
+  
+  .input-news 
+  {
+    height: 40px;
+    color: rgb(0, 0, 0);
+    border: 1px transparent;
+    background-color: rgb(179, 179, 179);
+    padding-left: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .input-news::placeholder 
+  {
+    color: rgb(75, 75, 75);
+  }
+  
+  .input-btn 
+  {
+    padding: 12px 13px;
+    border: none;
+    background-color: hsl(331, 76%, 64%);
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .input-btn:hover 
+  {
+    background-color: rgb(197, 194, 189);
+  }
+  
